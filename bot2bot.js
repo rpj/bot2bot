@@ -43,6 +43,11 @@ function stringifyResponseMetrics (response) {
 }
 
 async function main () {
+  if (args.oneShotAll) {
+    console.log(await Promise.all(MODEL_ENDPOINTS.map(async (ep) => ([ep, await promptAndWait(START_PROMPT, ep)]))));
+    return;
+  }
+
   console.log(`>>> Start prompt: "${START_PROMPT}"`);
   console.log(`>>> Next prompt:  "${CONT_PROMPT}"`);
   console.log(`>>> Rounds:       ${ROUNDS}`);

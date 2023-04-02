@@ -1,5 +1,5 @@
 {
     "model_endpoints": [],
     "rounds": 5,
-    "wait_time_seconds": 5
+    "wait_time_seconds": 15
 }
