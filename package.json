@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "semistandard --fix --verbose"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.9",
+    "yargs": "^17.7.1"
+  },
+  "devDependencies": {
+    "semistandard": "^16.0.1"
+  }
 }
